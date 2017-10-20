@@ -23,6 +23,8 @@ You need to install following external libraries as well
 
 	1. networkx
 	2. dendropy
+	
+### Implementation
 
 If all the requirements are met, execute the main.py python script. The pipeline will be implemented and the output matrices can be found on the outputs folder.
 
@@ -59,7 +61,7 @@ finalmatchedvtlist.txt: list of species in the propagated matrix that matched wi
 
 finalmismatchedlist_andstats.txt: list of species in the propagated matrix that did not match with the open tree species. This list is separated based on the reason for being mismatched (improper naming syntax, taxa being extinct, etc.)
 
-intermediate_matrices folder
+### intermediate_matrices folder
 
 Each step of the pipeline generates an intermediate version of the data matrix downloaded from KB. Only the final output matrices are included in the outputs folder. All the intermediate matrices are included in this intermediate_matrices folder.
 
