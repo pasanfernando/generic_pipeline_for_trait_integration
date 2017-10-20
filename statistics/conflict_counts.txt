@@ -1,0 +1,24 @@
+polymorpic state statistics for pectoral_fin 
+total number of taxa: 7
+
+
+number of families: 5
+Achiropsettidae
+       Nelson_Fin_Loss_1-28-15.xml
+       Evseenko, 2000.xml
+Stomiidae
+       Nelson_Fin_Loss_1-28-15.xml
+Synbranchidae
+       Nelson_Fin_Loss_1-28-15.xml
+Soleidae
+       Nelson_Fin_Loss_1-28-15.xml
+Gobiesocidae
+       Nelson_Fin_Loss_1-28-15.xml
+
+number of genera: 0
+
+number of species: 2
+Symphurus williamsi
+       Nelson_Fin_Loss_1-28-15.xml
+Neocyema erythrosoma
+       Nelson_Fin_Loss_1-28-15.xml
