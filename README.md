@@ -1,19 +1,26 @@
+# A Generic pipeline to integrate large trait matrices with large phylogenies
+
 This is a basic read me file for the pipeline. You can use the tutorial for step by step details on how to use the pipeline and visualize the character evolution in a phylogenetic tree. 
 
 This pipeline transforms a character matrix obtained from Phenoscape Knowledge base (KB) into a version that can be efficiently integrated with an Open Tree phylogeny. 
 
+### Inputs
 
 There two user inputs required for the pipeline
+
 	1.A character matrix downloaded from Phenoscape KB
 	2.Open tree phylogeny downloaded from Open Tree of Life
 
-	Optional: you can request for a meta-data file for the character your are interested in; this enables you to distinguish between inferred and asserted states (step 4 of the pipeline). Without the meta-data file you can still continue the pipeline, but you cannot differentially visualize the inferred vs asserted states. Refer to the tutorial for more details.
+Optional: you can request for a meta-data file for the character your are interested in; this enables you to distinguish between inferred and asserted states (step 4 of the pipeline). Without the meta-data file you can still continue the pipeline, but you cannot differentially visualize the inferred vs asserted states. Refer to the tutorial for more details.
 
 Please move the input files to the folder named ‘inputs’
+
+### Requirements
 
 To run the pipeline you need to use Python version 2 (2.7 or newer). This will not work on python 3. 
 
 You need to install following external libraries as well
+
 	1. networkx
 	2. dendropy
 
@@ -28,7 +35,7 @@ tree_integration_pipeline folder contains the scripts for each step of the pipel
 
 3.finalopentree_matrix_onlydata.txt: This matrix is also ready to be merged with the Open Tree phylogeny. The difference between the previous matrix is: this matrix only contains taxa that are in the propagated matrix. In our example, this means it has 11,786 taxa, not 38,830. This matrix does not have taxa with missing data as before.
 
-Statistics folder
+### Statistics folder
 
 This folder contains files that has valuable statistics regarding the procedure of the pipeline
 
@@ -57,6 +64,7 @@ intermediate_matrices folder
 Each step of the pipeline generates an intermediate version of the data matrix downloaded from KB. Only the final output matrices are included in the outputs folder. All the intermediate matrices are included in this intermediate_matrices folder.
 
 tabdelemited_charactermatrix.txt: this matrix is resulted during the step 1 of the pipeline after converting the input data matrix downloaded by KB to tab-delimited format. This matrix should be tab-delimited and contains two columns: taxa_name and the character you are interested in. The meaning of the character states for the character column is given below.
+
 	0: absence
 	1: presence
 	0&1: presence and absence: conflicts or polymorphisms
@@ -66,6 +74,7 @@ preprocessed_matrix.txt: This matrix is generated after the step 2 of the pipeli
 conflicts_removed_datamatrix.txt: this matrix is generated in step 3 after removal of ‘0&1’ states from higher-level taxa.
 
 modified_inferredadded_matrix.txt: this matrix is only generated in step 4 if you input the meta-data file. The matrix contains an additional column (character_name_inferred) for inferred character states. The meaning of the different states in this column is given below
+
 	0: asserted presence
 	1: asserted presence
 	2: inferred presence
@@ -73,6 +82,7 @@ modified_inferredadded_matrix.txt: this matrix is only generated in step 4 if yo
 
 
 finalVTOmatrix.txt: this matrix is generated after propagation in step 5. The matrix contains a new column (char_name_propagated) to represent the propagated status for each taxon. The propagated state can be 
+
 	0: not propagated
 	1: propagated 
 
